@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsl(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  background-color: var(--very-light-gray);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+  width: 919px;
+  height: 501px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 48px 50px;
+  gap: 20px;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", serif;
+  color: var(--very-light-gray);
+  font-size: 35px;
+}
+
+.card-description {
+  color: var(--transparent-white);
+  font-size: 15px;
+  line-height: 27px;
+  margin-bottom: 70px;
+  font-weight: 300;
+}
+
+.card-button {
+  text-decoration: none;
+  width: 148px;
+  height: 53px;
+  padding-top: 15px;
+  text-align: center;
+  background-color: var(--transparent-white);
+  border-radius: 50px;
+  transition: 0.3;
+}
+
+.card-button:hover {
+  border: 2px solid var(--transparent-white);
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.card.sedan > .card-button {
+  color: var(--bright-orange);
+}
+
+.card.sedan > .card-button:hover {
+  background-color: var(--bright-orange);
+  color: var(--transparent-white);
+}
+
+.card.suvs > .card-button {
+  color: var(--dark-cyan);
+}
+
+.card.card.suvs > .card-button:hover {
+  background-color: var(--dark-cyan);
+  color: var(--transparent-white);
+}
+
+.card.luxury > .card-button {
+  color: var(--very-dark-cyan);
+}
+
+.card.luxury > .card-button:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--transparent-white);
+}
+
+.card.luxury > .card-description {
+  margin-bottom: 70px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
